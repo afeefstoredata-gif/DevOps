@@ -1,0 +1,85 @@
+******Storage Should be under 100MB********
+
+##Git Beginner Commands Guide
+This guide helps beginners understand how to upload a project to GitHub using basic Git commands.
+
+--------------------
+cmd
+dir
+git init
+git config --global --add safe.directory "*"
+OR
+git config --global --add safe.directory "along_with_path"
+git add .
+OR
+git add filename.ext
+OR
+git add *.zip
+git status
+git commit -m "Here type your commit message"
+git remote add origin "add your git link"
+git push -u origin master
+git log
+--------------------
+
+git lfs install
+git lfs track "*.zip"
+git add .gitattributes
+git add "MAD (W1) (M.Nabeel).zip"
+git commit -m "Track zip with LFS"
+git remote add origin "add your git link"
+git push origin master
+## One-line emergency fix (works always)
+git config --global --add safe.directory "*"
+
+--------------------
+
+
+
+Commands
+Open CMD in Your Project Location
+--> cmd
+See All Files
+--> dir
+Initialize the Repository
+--> git init
+Fix Error (Dubious Ownership)
+If you face any error while initializing:
+
+git config --global --add safe.directory "your_folder_path_here"
+
+Add All Files
+--> git add .
+Add a Single File
+--git add filename.ext
+Add a File Inside a Folder
+--git add foldername/filename.ext
+Add Multiple Specific Files
+--git add file1.html file2.css file3.js
+Add all .html files:
+--git add *.html
+Add all .js in a folder:
+--git add src/*.js
+
+Check File Status
+--> git status
+Commit Your Changes
+Use -m to write your commit message:
+--> git commit -m "Here type your commit message"
+
+Add GitHub Remote Repository
+Replace with your own GitHub repository URL:
+-->git remote add origin https://github.com/your-username/your-repo.git
+
+Check Current Branch
+--> git branch
+
+Push Your Project to GitHub
+If your default branch is master:
+--> git push -u origin master
+
+If your default branch is main:
+
+--> git push -u origin main
+That's for see the all log master and branch
+--> git log
